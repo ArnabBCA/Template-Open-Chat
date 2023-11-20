@@ -1,0 +1,56 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.home{
+    overflow: hidden;
+    height: 100svh;
+    background-color: rgb(116, 116, 219);
+    padding: 6px;
+    display: flex;
+    gap: 6px;
+    position: relative;
+}
+.sidebar{
+    height: 100%;
+    min-width: 50px;
+    background-color: rgb(24, 26, 64);
+    border-radius: 10px;
+}
+.contact{
+    height: 100%;
+    border-radius: 10px;
+    flex: 1;
+    max-width: calc(100% - 88px);
+    background-color: rgb(55, 59, 151);
+}
+.right{
+    flex: 3;
+    width: 70%;
+    height: 100%;
+    border-radius: 10px;
+    background-color: rgb(134, 138, 212);
+    padding: 10px;
+}
+.right button{
+    outline: none;
+    border: none;
+    background-color: blue;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 10px;
+}
+
+@media only screen and (max-width: 600px){
+    .right{
+        position: absolute;
+        width: calc(100% - 12px);
+        left: 6px;
+        height: calc(100svh - 12px);
+        transition: .5s;
+    }
+    .active{
+        left: calc(100% - 32px);
+    }
+}
